@@ -1,6 +1,7 @@
 import React from 'react'
 import Game from './components/Game'
-// import './styles.css'
+
+// Just create a seed file with a set of possible games to make it more fun, use a random game every restart.
 
 const App = () =>
   <Game
