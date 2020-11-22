@@ -2,7 +2,7 @@
 
 This sample project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-https://stupefied-kilby-8aa250.netlify.app/
+https://pacman.ellipe.party
 
 ## Available Scripts
 
