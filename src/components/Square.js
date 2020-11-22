@@ -1,27 +1,30 @@
 import React from 'react'
+import PropTypes from 'prop-types';
+import './Square.css';
 
 const Square = ({ cellSize, isAvailable, children, isStartingPosition, isTargetPosition }) => {
-  let backgroundColor
-  backgroundColor = isAvailable ? 'white' : '#cccccc'
-  backgroundColor = isStartingPosition ? 'yellow' : backgroundColor
-  backgroundColor = isTargetPosition ? 'green' : backgroundColor
+  let className
+  className = isAvailable ? 'available' : 'unavailable'
+  className = isStartingPosition ? 'starting' : className
+  className = isTargetPosition ? 'target' : className
 
   const style = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    border: '1px solid #959595',
-    background: backgroundColor,
-    padding: '4px',
-    boxSizing: 'border-box',
     height: cellSize,
     width: cellSize,
   }
   return (
-    <div style={style}>
+    <div className={className} style={style}>
       {children}
     </div>
   )
+}
+
+Square.propTypes = {
+  cellSize: PropTypes.number,
+  isAvailable: PropTypes.number,
+  children: PropTypes.any,
+  isStartingPosition: PropTypes.bool,
+  isTargetPosition: PropTypes.bool
 }
 
 export default Square

@@ -1,0 +1,10 @@
+.message {
+  padding-bottom: 10px;
+  font-weight: 800
+}
+
+.top-board {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}

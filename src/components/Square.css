@@ -1,0 +1,39 @@
+.available {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #959595;
+  background: white;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.unavailable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #959595;
+  background: #cccccc;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.starting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #959595;
+  background: yellow;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.target {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #959595;
+  background: green;
+  padding: 4px;
+  box-sizing: border-box;
+}

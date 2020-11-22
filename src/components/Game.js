@@ -1,17 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types';
+import './Game.css'
+
 import Board from './Board'
 
-const style = {
-  header: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    paddingBottom: '10px',
-  },
-  message: {
-    paddingBottom: '10px',
-    fontWeight: '800',
-  },
-}
+
 
 class Game extends React.Component {
   state = {
@@ -126,12 +119,12 @@ class Game extends React.Component {
     return (
       <div>
         <div>
-          <div style={style.message}>
+          <div className='message'>
             {this.state.moveLimit <= 0 || this.state.gameStatus !== null
               ? this.renderGameStatus()
               : 'In Progress'}
           </div>
-          <div style={style.header}>
+          <div className='top-board'>
             <span>
               Movements Left: {this.state.moveLimit}
             </span>
@@ -153,4 +146,13 @@ class Game extends React.Component {
     )
   }
 }
+
+Game.propTypes = {
+  targetPosition: PropTypes.array,
+  availableCells: PropTypes.array,
+  startingPosition: PropTypes.array,
+  moveLimit: PropTypes.number,
+  cellSize : PropTypes.number
+}
+
 export default Game
