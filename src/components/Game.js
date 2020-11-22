@@ -77,7 +77,7 @@ class Game extends React.Component {
   }
 
   renderGameStatus = () => {
-    return this.state.gameStatus ? 'You Win!' : 'Ohhh, You Loose'
+    return this.state.gameStatus ? 'You Win!' : 'Ohhh, You Lose'
   }
 
   handleMovement = e => {
