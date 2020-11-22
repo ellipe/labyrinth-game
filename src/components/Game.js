@@ -15,6 +15,10 @@ class Game extends React.Component {
     gameStatus: null,
   }
 
+  // Just for fun =)
+  winAudio = new Audio('/win.mp3')
+  defeatAudio = new Audio('/defeat.mp3')
+
   playMovement = nextMove => {
     if (
       this.validateBoundaries(nextMove) &&
@@ -25,6 +29,7 @@ class Game extends React.Component {
         playerPosition: nextMove,
         moveLimit: this.state.moveLimit - 1,
       })
+
     }
     this.validateMatch()
   }
@@ -46,12 +51,14 @@ class Game extends React.Component {
       this.setState({
         gameStatus: 1,
       })
+      this.winAudio.play()
       return
     }
     if (this.state.moveLimit === 0) {
       this.setState({
         gameStatus: 0,
       })
+      this.defeatAudio.play()
       return
     }
   }
@@ -63,6 +70,10 @@ class Game extends React.Component {
       moveLimit: this.props.moveLimit,
       gameStatus: null,
     })
+    this.winAudio.pause()
+    this.defeatAudio.pause()
+    this.winAudio.currentTime = 0;
+    this.defeatAudio.currentTime = 0;
   }
 
   renderGameStatus = () => {
@@ -110,6 +121,7 @@ class Game extends React.Component {
 
   componentDidMount() {
     document.addEventListener('keydown', this.handleMovement, false)
+    // this.movementAudio.playbackRate = 1.3
   }
   componentWillUnmount() {
     document.removeEventListener('keydown', this.handleKey, false)
