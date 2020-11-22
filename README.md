@@ -1,6 +1,8 @@
 # Labyrinth Game 
 
-FYI: This sample project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This sample project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+https://stupefied-kilby-8aa250.netlify.app/
 
 ## Available Scripts
 
@@ -29,6 +31,3 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
